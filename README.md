@@ -20,7 +20,23 @@ python -m venv .nome_ambiente
 `
 source .nome_ambiente/bin/activate
 `
+
 ## 3. Instale as dependências executando:
 `
 pip install -r requirements.txt
 `
+
+### OBS<sub>1</sub>: Para entrarem no ambiente de desenvolvimento, repitam o 2º passo:
+### OBS<sub>2</sub>: Caso necessitem adicionar alguma nova biblioteca ao projeto utilizem:
+```
+pip install -r requirements.txt
+pip freeze > requirements.txt
+```
+
+# Tópicos do Notebook
+> - Imports 
+> - Arrays e Operações Vetorizadas
+> - Estatísticas Descritivas
+> - Correlações
+> - Pequenos Exemplos com Dados Reais
+> - Visualização de Dados
