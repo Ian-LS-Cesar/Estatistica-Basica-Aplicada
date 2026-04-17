@@ -35,5 +35,5 @@
 
 ## Checklist pós-gravação (Equipe E)
 
-- [ ] Template de vídeo aplicado.
-- [ ] Legenda ou cards com definições de variância/desvio se o template pedir.
+- Template de vídeo aplicado.
+- Legenda ou cards com definições de variância/desvio se o template pedir.

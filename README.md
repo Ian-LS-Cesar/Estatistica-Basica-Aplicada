@@ -2,14 +2,14 @@
 
 **Curso:** Python para Ciência de Dados (CCEX) · **Disciplina:** Ciência dos Dados (T326) — UNIFOR · **Equipe:** Desbravadores do Ciberespaço
 
-Este repositório concentra o material do **Módulo 2** (arrays, estatísticas descritivas, correlações, exemplo com dados reais e visualização com Matplotlib). O notebook principal é [`Projeto.ipynb`](Projeto.ipynb). Roteiros para gravação das aulas estão em [`roteiros/`](roteiros/).
+Este repositório concentra o material do **Módulo 2** (arrays, estatísticas descritivas, correlações, exemplo com dados reais e visualização com Matplotlib). O notebook principal é `[Projeto.ipynb](Projeto.ipynb)`. Roteiros para gravação das aulas estão em `[roteiros/](roteiros/)`.
 
 ---
 
 ## Trilha sugerida (aluno)
 
 1. Configurar o ambiente (seção abaixo).
-2. Abrir `Projeto.ipynb` e seguir a ordem das seções: Imports → Arrays → Estatísticas descritivas → Correlações → Dados reais → Visualização → Exercícios.
+2. Abrir `Projeto.ipynb` e seguir a ordem: Imports → Arrays → **Indexação** → Estatísticas descritivas → Correlações → Dados reais → Visualização → Exercícios.
 3. Resolver os exercícios; conferir o gabarito ao final do notebook (tente antes sem olhar).
 
 **Pré-requisitos:** conceitos do Módulo 1 (variáveis, listas, funções, fluxo básico em Python).
@@ -24,13 +24,13 @@ Este repositório concentra o material do **Módulo 2** (arrays, estatísticas d
 python -m venv .venv
 ```
 
-2. Ative o ambiente:
+1. Ative o ambiente:
 
 **Windows (PowerShell):** `.\.venv\Scripts\activate.ps1`  
 **Windows (cmd):** `.venv\Scripts\activate`  
 **macOS/Linux:** `source .venv/bin/activate`
 
-3. Instale as dependências:
+1. Instale as dependências:
 
 ```text
 pip install -r requirements.txt
@@ -46,7 +46,7 @@ jupyter nbconvert --execute --to notebook Projeto.ipynb --output /tmp/Projeto_va
 
 (No Windows, troque `/tmp/` por uma pasta temporária local.)
 
-4. Inicie o Jupyter e abra `Projeto.ipynb`:
+1. Inicie o Jupyter e abra `Projeto.ipynb`:
 
 ```text
 python -m ipykernel install --user --name=estatistica-modulo2
@@ -57,11 +57,21 @@ jupyter notebook Projeto.ipynb
 
 ---
 
+## Figuras didáticas (`img/`)
+
+Imagens estáticas (PNG) referenciadas no `Projeto.ipynb` para reforçar conceitos no GitHub: indexação 1D, ideia de broadcasting e intuição da correlação de Pearson. Se clonar o repositório e as imagens não aparecerem, gere-as com:
+
+```text
+python tools/gerar_figuras_notebook.py
+```
+
 ## Dados (`data/`)
 
-| Arquivo | Descrição |
-|--------|-----------|
-| [`data/vendas_loja.csv`](data/vendas_loja.csv) | Dados **sintéticos** de exemplo (12 semanas): gasto em mídias sociais (mil R$), visitantes à loja e vendas (mil R$). Uso exclusivamente didático; não representa empresa real. |
+
+| Arquivo                                        | Descrição                                                                                                                                                                      |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `[data/vendas_loja.csv](data/vendas_loja.csv)` | Dados **sintéticos** de exemplo (12 semanas): gasto em mídias sociais (mil R$), visitantes à loja e vendas (mil R$). Uso exclusivamente didático; não representa empresa real. |
+
 
 Se a **Equipe E** definir outro local ou nomenclatura para datasets no repositório unificado do curso, ajuste os caminhos no notebook para manter a reprodutibilidade.
 
@@ -71,12 +81,12 @@ Se a **Equipe E** definir outro local ou nomenclatura para datasets no repositó
 
 Use esta lista nos checkpoints com o professor e com a equipe de integração. Marque itens quando recebidos ou concluídos.
 
-- [ ] Template oficial de **notebook** (cabeçalho, células obrigatórias, estilo).
-- [ ] Template de **slides** (se obrigatório para o módulo).
-- [ ] **Checklist de vídeo** (resolução, formato, intro/outro, legendas, nome de arquivo).
-- [ ] **Estrutura de pastas** e convenção de nomes no repositório global do curso.
-- [ ] Prazo para **pull request** ou envio do pacote final (notebooks + `data/` + links).
-- [ ] **Playlist:** títulos padronizados e descrições com links para este repositório.
+- Template oficial de **notebook** (cabeçalho, células obrigatórias, estilo).
+- Template de **slides** (se obrigatório para o módulo).
+- **Checklist de vídeo** (resolução, formato, intro/outro, legendas, nome de arquivo).
+- **Estrutura de pastas** e convenção de nomes no repositório global do curso.
+- Prazo para **pull request** ou envio do pacote final (notebooks + `data/` + links).
+- **Playlist:** títulos padronizados e descrições com links para este repositório.
 
 **Modelo de report em aula de acompanhamento:** “Feito: … | Em andamento: … | Bloqueado: … (dependência: Equipe E / outro) | Próximos passos até …”
 
@@ -91,15 +101,21 @@ Use esta lista nos checkpoints com o professor e com a equipe de integração. M
 
 ## Repositório e links da equipe
 
-- **GitHub (este repo):** *https://github.com/Ian-LS-Cesar/Estatistica-Basica-Aplicada.git*  
+- **GitHub (este repo):** *[https://github.com/Ian-LS-Cesar/Estatistica-Basica-Aplicada.git](https://github.com/Ian-LS-Cesar/Estatistica-Basica-Aplicada.git)*
+
 ---
 
 ## Tópicos do notebook
 
 - Imports  
 - Arrays e operações vetorizadas  
+- Indexação, seleção e filtro em NumPy *(conteúdo pedido pelo Prof. Caio)*  
 - Estatísticas descritivas  
 - Correlações  
 - Pequenos exemplos com dados reais  
-- Visualização de dados  
-- Exercícios de fixação e gabarito  
+- Visualização de dados (vários tipos de gráfico Matplotlib)  
+- Exercícios de fixação e gabarito
+
+### Feedback do professor (abril/2026)
+
+Refletido no `Projeto.ipynb`: textos e figuras em `img/`, maior espaçamento nos blocos de código, seção **Indexação, seleção e filtro**, e gráficos adicionais (**barras, boxplot e heatmap**, além de linha, dispersão e histograma). Para regenerar os PNGs: `python tools/gerar_figuras_notebook.py`. Para reaplicar o patch do notebook a partir do repositório base: `python tools/aplicar_feedback_notebook.py` (uso interno; o notebook versionado já contém o resultado).

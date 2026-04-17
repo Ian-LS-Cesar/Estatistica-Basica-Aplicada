@@ -19,7 +19,7 @@
 
 1. Criar array a partir de lista; imprimir `shape`, `ndim`, `dtype`.
 2. `reshape`: transformar sequência em matriz 3×4.
-3. Operações `*`, `**`, `np.sqrt` em cima do vetor inteiro.
+3. Operações `*`, `*`*, `np.sqrt` em cima do vetor inteiro.
 4. `sum`, `mean` com e sem `axis` na matriz.
 5. Filtrar com `b[b > 6]`.
 6. Somar uma “linha” a todas as linhas (broadcasting).
@@ -41,6 +41,6 @@ Enquanto codifica: comentar em voz alta **por que** não usar `for` por elemento
 
 ## Checklist pós-gravação (Equipe E)
 
-- [ ] Áudio sem ruído forte; volume estável.
-- [ ] Código e fonte legíveis na tela.
-- [ ] Intro/outro e nome do arquivo conforme template da Equipe E.
+- Áudio sem ruído forte; volume estável.
+- Código e fonte legíveis na tela.
+- Intro/outro e nome do arquivo conforme template da Equipe E.
